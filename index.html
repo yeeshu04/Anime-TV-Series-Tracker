@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anime & TV Series Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="body-bg"></div>
+  <!-- Header + Theme Toggle -->
+  <header>
+    <div class="header-bg"></div>
+    <div class="header-content">
+      <h1>Anime & TV Series Tracker</h1>
+      <button id="toggleTheme">🌙 / ☀️</button>
+    </div>
+  </header>
+
+  <!-- Navigation / Status Filters -->
+  <nav>
+    <div class="nav-content">
+      <button class="filter" data-cat="All">All</button>
+      <button class="filter" data-cat="Watching">Watching</button>
+      <button class="filter" data-cat="Completed">Completed</button>
+      <button class="filter" data-cat="On Hold">On Hold</button>
+      <button class="filter" data-cat="Dropped">Dropped</button>
+      <button class="filter" data-cat="Plan to Watch">Plan to Watch</button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="container">
+    <div class="container-bg"></div>
+    <main>
+      <section id="tracker">
+        <h2>Your Shows</h2>
+        <div id="showList"></div>
+      </section>
+
+      <section id="stats">
+        <h2>Analytics</h2>
+        <p>Total Episodes Watched: <span id="stat-episodes">0</span></p>
+        <p>Total Shows: <span id="stat-total">0</span></p>
+        <p>Total Completed Shows: <span id="stat-completed">0</span></p>
+        <p>Shows Watching: <span id="stat-watching">0</span></p>
+        <p>Shows On Hold: <span id="stat-hold">0</span></p>
+        <p>Shows Dropped: <span id="stat-dropped">0</span></p>
+        <p>Shows Plan to Watch: <span id="stat-plan">0</span></p>
+      </section>
+
+      <section id="addShow">
+        <h2>Add New Show</h2>
+        <input type="text" id="titleInput" placeholder="Title">
+        <input type="number" id="totalEpInput" placeholder="Total Episodes">
+        <select id="categoryInput">
+          <option>Plan to Watch</option>
+          <option>Watching</option>
+          <option>Completed</option>
+          <option>On Hold</option>
+          <option>Dropped</option>
+        </select>
+        <button id="addBtn">Add Show</button>
+      </section>
+    </main>
+
+    <!-- Community Section -->
+    <aside>
+      <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <section id="reco" style="width: 90%; max-width: 350px;">
+          <h2>AI Recommendations</h2>
+          <button id="getReco">Get Recommendations</button>
+          <ul id="recoList"></ul>
+        </section>
+
+        <section id="clubs" style="width: 90%; max-width: 350px;">
+          <h2>Clubs</h2>
+          <p class="club-desc">Clubs are groups where users can join, share, and discuss their favorite shows together. Create a club to start a community around your interests!</p>
+          <div id="clubList"></div>
+          <input type="text" id="clubNameInput" placeholder="New Club Name">
+          <button id="createClubBtn">Create Club</button>
+          <div id="clubDetails" style="margin-top:1em;"></div>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Admin Panel Stub -->
+  <div id="adminPanel" class="modal hidden">
+    <h2>Admin Panel</h2>
+    <p>Here you could manage users, posts, clubs...</p>
+    <button id="closeAdmin">Close Admin</button>
+  </div>
+
+  <script src="script.js"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <span>&copy; 2024 Anime & TV Series Tracker. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
